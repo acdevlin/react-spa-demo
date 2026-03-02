@@ -4,7 +4,7 @@ const Footer = () => {
       <h2>ABC Limited</h2>
       <h3>Awesome and affordable products</h3>
       <div className="copyright">
-        <p>Copyright Â© 2026 ABC Limited. All rights reserved.</p>
+        <p>Copyright © 2026 ABC Limited. All rights reserved.</p>
       </div>
     </footer>
   )

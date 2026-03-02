@@ -11,8 +11,6 @@ const PageNotFound = () => {
 
       <section class="w-820px">
         <h3>Sorry, this page does not exist.</h3>
-        <br/>
-        <p>Return to the website <Link to="/">Home</Link> page.</p>
       </section>
     </>
   );
