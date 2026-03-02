@@ -334,7 +334,6 @@ header, #header {
 
 header h1, #header h1 { 
     color: #fff;
-    text-transform: uppercase;
     font-weight: 400;
     font-size: calc(28px + (48 - 28) * ((100vw - 320px) / (1140 - 320)));
     letter-spacing: -1px
