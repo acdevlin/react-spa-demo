@@ -4,7 +4,8 @@ import '../stylesheets/SampleInput.css';
 import React, { useState, useEffect } from 'react';
 
 const SampleInput = () => {
-  const [textInput, setTextInput] = useState('');
+  const [titleText, setTitleText] = useState('');
+  const [bodyText, setBodyText] = useState('');
   const [toastMessage, setToastMessage] = useState('');
 
   useEffect(() => {
@@ -20,15 +21,22 @@ const SampleInput = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const trimmedText = textInput.trim();
+    const trimmedTitle = titleText.trim()
+    const trimmedBody = bodyText.trim();
 
-    if (!trimmedText) {
-      setToastMessage('Please enter some text first.');
+    if (!trimmedTitle) {
+      setToastMessage('Please enter a title.');
       return;
     }
 
-    setToastMessage(`Submitted: ${trimmedText}`);
-    setTextInput('');
+    if (!trimmedBody) {
+      setToastMessage('Please enter body text.');
+      return;
+    }
+
+    setToastMessage(`Submitted a new post.\n\nTitle: ${trimmedTitle}\nBody: ${trimmedBody}`);
+    setBodyText('');
+    setTitleText('');
   };
 
   return (
@@ -41,11 +49,17 @@ const SampleInput = () => {
 
       <section className="w-820px sample-input-section">
         <input
-          className="sample-text-input"
+          className="title-text-input"
+          placeholder="Enter Title..."
+          value={titleText}
           type="text"
-          placeholder="Enter something..."
-          value={textInput}
-          onChange={(e) => setTextInput(e.target.value)}
+          onChange={(e) => setTitleText(e.target.value)}
+        />
+        <textarea
+          className="body-text-input"
+          placeholder='Enter body...'
+          value={bodyText}
+          onChange={(e) => setBodyText(e.target.value)}
         />
 
         <button
