@@ -1,0 +1,19 @@
+.footer-h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--gray-200);
+}
+
+.footer-h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: var(--gray-200);
+}
+
+.footer-copyright p {
+    font-size: 0.9rem;
+    color: var(--gray-400);
+    margin: 0;
+}

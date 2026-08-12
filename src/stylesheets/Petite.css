@@ -262,6 +262,27 @@ div[class^='col-'] { overflow: visible }
 /* Global font */
 body { font-family: var(--global-font) }
 
+/* Utility classes used in page markup */
+.theme-light { background-color: #21479c; color: #fff; }
+.theme-dark { background-color: var(--gray-800); color: var(--gray-100); }
+
+.text-center-desktop,
+.text-center-mobile {
+    text-align: center;
+}
+
+.container-text {
+    width: min(100%, 820px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.w-820px {
+    width: min(100%, 820px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* Content containers */
 header, section, figure, footer { position: relative; display: block }
 header, section, footer { margin-left: auto; margin-right: auto; overflow: hidden }
