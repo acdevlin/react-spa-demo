@@ -10,7 +10,7 @@ const PageNotFound = () => {
         </div>
       </header>
 
-      <section class="w-820px">
+      <section className="w-820px">
         <p>Sorry, this page does not exist.</p>
       </section>
     </>
